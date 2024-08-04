@@ -1,0 +1,11 @@
+services:
+
+  wxcamtimelapse:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+    - /config/saved_files:/config/saved_files
+    - /config/video:/config/video
+    environment:
+            - URL=[SERVER_URL_TO_JPEG]
+            - DAYS_TO_KEEP=2
